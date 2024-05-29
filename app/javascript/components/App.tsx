@@ -5,6 +5,7 @@ import NavMain from './NavMain';
 import DashboardTitle from './DashboardTitle';
 import KpiDevice from './devices/KpiDevice';
 import TicketEscalationsDevice from './devices/TicketEscalationsDevice';
+import { ticketEscalations } from '../data/TicketEscalationsData';
 
 const App = () => {
   return (
@@ -16,10 +17,17 @@ const App = () => {
           <div className="w-75 m-auto">
             <DashboardTitle />
             <KpiDevice />
-            <div className="row">
-              <div className="col-3">
-                <TicketEscalationsDevice />
-              </div>
+            <div className="ticket-escalations-title d-flex justify-content-center">
+              THIS WEEK'S TICKET ESCALATIONS
+            </div>
+            <div className="row justify-content-between">
+              {Object.keys(ticketEscalations).map((escalationKey) => (
+                <div className="col-lg-2">
+                  <TicketEscalationsDevice
+                    ticketEscalations={ticketEscalations[escalationKey]}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>

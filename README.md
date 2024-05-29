@@ -172,7 +172,7 @@
   - The horizonal axis indicates the date.
     - Every 15 days from 5/1 to 12/15.
 
-### [ ] TK-005 > Front End > Build a _Ticket Escalations_ Device
+### [X] TK-005 > Front End > Build a _Ticket Escalations_ Device
 
 #### Story
 
@@ -201,7 +201,7 @@
 - The device should display a maximum of 6 escalations.
   - If the count exceeds the maximum, a `Show More` button should be displayed at the bottom of the vertical nav.
 
-### [ ] TK-006 > Front End > Display a Series of _Ticket Escalation_ Devices on the Dashboard
+### [X] TK-006 > Front End > Display a Series of _Ticket Escalation_ Devices on the Dashboard
 
 #### Story
 
