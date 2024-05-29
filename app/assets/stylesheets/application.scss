@@ -93,6 +93,16 @@ body {
   padding-right: 0 !important;
 }
 
+.ticket-escalations-header {
+  @extend .border-highlight-left;
+  height: 6em;
+}
+
+.ticket-escalations-header-badge span {
+  font-size: 1.4em !important;
+  padding: 8px !important;
+}
+
 .white {
   background: #ffffff !important;
 }
@@ -101,9 +111,17 @@ body {
   color: gray;
 }
 
-.kpi-container {
+.black {
+  color: black;
+}
+
+.device-container {
   @extend .border-thin-around;
   @extend .white;
+  @extend .border-rounded;
+}
+
+.border-rounded {
   border-radius: 6px;
 }
 
@@ -115,8 +133,16 @@ body {
   border-bottom: 1px solid #e4e8f0;
 }
 
+.border-thin-top {
+  border-top: 1px solid #e4e8f0;
+}
+
 .border-thin-right {
   border-right: 1px solid #e4e8f0;
+}
+
+.border-highlight-left {
+  border-left: 4px solid cyan;
 }
 
 // TODO: Use specificity over important
@@ -138,6 +164,22 @@ body {
 .icon-xs {
   font-size: 0.75em;
   margin: -1em;
+}
+
+// NOTE: This is admittedly hacky, but effective for now
+.ticket-escalation-list-item .pb_title_kit_size_4 {
+  display: none;
+}
+
+.ticket-escalations-footer {
+  @extend .border-thin-top;
+}
+
+.show-more {
+  color: #0056cf;
+  margin: 0.7em;
+  font-weight: bold;
+  font-size: 1.3em;
 }
 
 @import 'reset';

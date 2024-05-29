@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Nav, Title, Badge, User, Image } from 'playbook-ui';
 
 const NavTop = () => {
