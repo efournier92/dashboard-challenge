@@ -14,19 +14,46 @@
  *= require_self
  */
 
-
 // Playbook App Configuration for Font Family
 $font_family_base: 'Montserrat';
 
 // Enabled Weights in Montserat
-$lighter:       200;
-$light:         200;
-$regular:       500;
-$bold:          700;
-$bolder:        700;
-$boldest:       700;
-$extrabold:     700;
+$lighter: 200;
+$light: 300;
+$regular: 500;
+$bold: 700;
+$bolder: 700;
+$boldest: 700;
+$extrabold: 700;
 
+.gray {
+  color: gray;
+}
 
-@import "reset";
-@import "playbook";
+.border-bottom-thin {
+  border: 1px solid #e4e8f0;
+}
+
+// TODO: Use specificity over important
+
+.font-light {
+  font-weight: $light !important;
+}
+
+.font-smaller {
+  font-size: 0.95em !important;
+}
+
+.font-subtitle {
+  font-weight: $lighter !important;
+  font-size: 0.8em !important;
+  line-height: 0em !important;
+}
+
+.icon-xs {
+  font-size: 0.75em;
+  margin: -1em;
+}
+
+@import 'reset';
+@import 'playbook';

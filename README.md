@@ -13,8 +13,33 @@
 
 - The initial commit was sourced from the following example repository.
   - [Power Home Remodeling > Playbook > React Rails Example](https://github.com/powerhome/playbook/tree/master/examples/rails-react-example)
+- This project heavily leverages UI components from the [Playbook Design System](https://playbook.powerapp.cloud/kits?type=react).
 
-## Getting Started
+## Challenge Requirements
+
+- Use _Playbook Design System_ to build the UI.
+- The solution **should be built using Ruby on Rails**, which is already included.
+  - You can mix in React, but make sure your foundation is Rails.
+- The UI should contain mostly components that are already built and available in the Playbook Design System.
+  - However, there are certain elements that are not yet available as Playbook kits.
+  - The deliverable can be mainly the display or presentation of the UI design.
+    - Any interactivity built for the dashboard will be considered bonus work.
+- Mock out any data needed for the page using Rails conventions or seeds.
+- SCSS syntax should be used for all styles.
+- Ensure the page displays correctly in multiple browsers.
+- Test for responsiveness (mobile).
+- Match the mockup.
+  - The layout should be **pixel-perfect** as a showcase of UI talent and attention to detail.
+  - _Be sure the match the mockup 100%, before adding any extra flair._
+- Add a click action to your UI.
+  - Examples:
+    - Display our dialog kit or a popover with any additional data you like.
+- The deliverable should be functional.
+  - Thoroughly test it for proper interactivity.
+- Ensure there is at least one connection to an external API for data.
+  - This could be names, avatars, a data source, or even the weather.
+
+## Project Details
 
 ### Dependencies
 
@@ -31,6 +56,12 @@
 1. `yarn watch` will take care of any React component changes
 1. `bin/rails s` will start the Rails application
 1. Navigate to [localhost:3000](http://localhost:3000)
+
+## Areas for Improvment
+
+### Icons
+
+- TODO
 
 ## Feature Stories
 
@@ -52,7 +83,7 @@
 - Add [Bootstrap CSS](https://getbootstrap.com/docs/5.3/getting-started/introduction/) to the process.
   - _Given a recognized need for a grid system, this being the industry standard, we should add it right away._
 
-### [ ] TK-001 > Front End > Create a _Top Bar_ Component
+### [X] TK-001 > Front End > Create a _Top Bar_ Component
 
 #### Story
 
