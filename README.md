@@ -1,10 +1,20 @@
-# Rails React Stack
+# Dashboard Challenge
 
-Rails gives us many options when it comes to configuring the frontend of our application, and if you wish you use React as the frontend, [react-rails](https://github.com/reactjs/react-rails) is the easiest way to go about it. This example project has been spun up using react-rails with Rails 7 and the following documentation will outline how you can integrate Playbook into such an app.
+## Overview
+
+- This application was built to demonstrate my competence with Rails, React, and component-based UI libraries.
+
+## Approach
+
+- In order to give structure to the development process and demonstrate my business-oriented approach, I began by scoping out [Feature Stories](#feature-stories) in the section below.
+  - The [Commit History](https://github.com/efournier92/dashboard-challenge/commits/master/) against this repo reflects my adherence to this discipline.
+
+## Sources
+
+- The initial commit was sourced from the following example repository.
+  - [Power Home Remodeling > Playbook > React Rails Example](https://github.com/powerhome/playbook/tree/master/examples/rails-react-example)
 
 ## Getting Started
-
-Now we can get started installing and running the application. Carefully review each step below then proceed to the next section.
 
 ### Dependencies
 
@@ -16,31 +26,283 @@ Now we can get started installing and running the application. Carefully review 
 1. Install gem dependencies `bundle`
 1. Install yarn dependencies `yarn`
 
-### Run the Application
+### Running the Application
 
 1. `yarn watch` will take care of any React component changes
 1. `bin/rails s` will start the Rails application
 1. Navigate to [localhost:3000](http://localhost:3000)
 
-## Creating React UI Components
+## Feature Stories
 
-There are multiple ways to create React UI components in the app. You can choose to make a full React application by continuing to develop from `app/javascript/components/App.tsx` or you could choose to only make individual React components for certain portions of the page.
+### [X] TK-000 > Back End > Initialize the Application
 
-### React Components Location:
+#### Story
 
-All React components are transpiled by Webpack via the Rails [Webpacker](https://github.com/rails/webpacker) gem which is already setup for you.
+- As a developer, I need to initialize a Rails application with React and Playbook tooling amiable on the front end, so I can start building Dashboard functionality.
 
-With this in place, you should know that any new components you create will need to live inside of `app/javascript/components` and any *packs* you may need to create will need to live inside of `app/javascript/packs`.
+#### Acceptance Criteria
 
-Follow this link to learn more about [Webpacker](https://github.com/rails/webpacker).
+- The application base has been cloned from the following repository location.
+  - https://github.com/powerhome/playbook/tree/master/examples/rails-react-example
+- The project has a GitHub repository.
+  - The contents of the base are pushed there.
+- The new application can be served via the `rails s` command.
+- The README includes a list of feature stories for development.
+  - _For lack of a proper ticketing system in scope of this assessment._
+- Add [Bootstrap CSS](https://getbootstrap.com/docs/5.3/getting-started/introduction/) to the process.
+  - _Given a recognized need for a grid system, this being the industry standard, we should add it right away._
 
-#### Working with WebpackerReact (webpacker-react)
+### [ ] TK-001 > Front End > Create a _Top Bar_ Component
 
-This library is a simple container for use with Rails which provides a view helper that can allow you to easily add React components to any Rails ERB template (`.html.erb`). If you view `app/views/pages/index.html.erb`, you will see that we were able to render the `app/javascript/components/App.tsx` React component into the `pages#index` view with a simple ERB tag like so:
+#### Story
 
-```erb
-<%= react_component("App") %>
-```
+- As a user, I want to see a _Top Bar_ component on the Dashboard page, so I can see application indicators.
 
-Follow this link to learn more about [`webpacker-react`](https://github.com/renchap/webpacker-react).
+#### Acceptance Criteria
 
+- The top bar includes:
+  - An application icon.
+  - The company name: _PB&J INTERNATIONAL_.
+  - An alert indicator with a bell icon and badge to count alerts.
+  - An inbox indicator with an inbox badge to count messages.
+  - A user icon with a user name, avatar, and drop-down arrow.
+
+### [ ] TK-002 > Front End > Create a _Navigation Bar_ Component
+
+#### Story
+
+- As a user, I want to see a navigation bar below the _Top Bar_, so I can select between different dashboard views.
+
+#### Acceptance Criteria
+
+- The component leverages the [Horizontal Nav](https://playbook.powerapp.cloud/kits/nav/react#horizontal-nav) component from the _Playbook Design System_.
+- Navigation options include:
+  - Dashboard.
+  - Products.
+  - In Progress.
+  - Settings.
+- The `Dashboard` option is selected by default.
+
+### [ ] TK-003 > Front End > Add a _Title_ to the Dashboard
+
+#### Story
+
+- As a user, I want to see a _Title_ component below the navigation bar, so I know what type of information I'm looking at.
+
+#### Acceptance Criteria
+
+- The main title reads _Commerce Dashboard_.
+- A subtitle, above the main title, reads _DASHBOARD_.
+  - This subtitle is left-hand justified.
+
+### [ ] TK-004 > Front End > Add a Device for displaying Key Performance Indicators
+
+#### Story
+
+- As a user, I want to see _Key Performance Indicators_ below the _Title_ section, so I can monitor these metrics.
+
+#### Acceptance Criteria
+
+- The device includes a top bar.
+  - This includes a title, labeling the device as _Key Performance Indicators_.
+    - The title is left-hand justified.
+  - This includes a circular-icon button.
+    - The button leverages the [Circle Icon Button](https://playbook.powerapp.cloud/kits/circle_icon_button/react) component from the _Playbook Design System_.
+    - Inside the button is a `...` elipse icon.
+- The device includes a side-navigation panel.
+  - Built using the [No-Highlight Vertical Nav](https://playbook.powerapp.cloud/kits/nav/react#no-highlight) component from the _Playbook Design System_.
+  - Navigation options include:
+    - Revenue.
+    - Orders.
+    - Profit.
+    - Average Check.
+    - Canceled.
+    - Repeat Sales.
+  - Where applicable, the navigation options indicate percetange up or down.
+    - Up is indicated with in green with an upward-facing arrow.
+    - Down is indicated with in red with an downward-facing arrow.
+  - In desktop, this rendered on the left-hand side of the line graph.
+  - In mobile, this rendered on the below the line graph.
+- The device includes a line graph.
+  - Built using the [Line Graph](https://playbook.powerapp.cloud/kits/line_graph/react) component from the _Playbook Design System_.
+  - The vertical axis indicates the value.
+  - The horizonal axis indicates the date.
+    - Every 15 days from 5/1 to 12/15.
+
+### [ ] TK-005 > Front End > Build a _Ticket Escalations_ Device
+
+#### Story
+
+- As a developer, I want to create a _Ticket Escalation_ component, so I can reuse it in the dashboard.
+
+#### Acceptance Criteria
+
+- This can built starting with the [Default List](https://playbook.powerapp.cloud/kits/list/react#default) component from the _Playbook Design System_.
+- The new component allows the following properties to be passed in.
+  - Title.
+  - Color.
+  - Count.
+  - A list of escalations.
+    - An array of objects, containing the following information.
+      - Escalation type.
+      - The reporting user's avatar.
+      - The reporting user's initials.
+- The escalation title should be displayed at the top of the device.
+  - This should be left-hand justified.
+- The escalation count should be displayed next to the title at the top of the device.
+  - This should be right-hand justified.
+- Each vertical row in the device should include the following.
+  - A circular icon.
+    - If the user's avatar is available, display that.
+    - If the user's avatar is not available, display the user's initials.
+- The device should display a maximum of 6 escalations.
+  - If the count exceeds the maximum, a `Show More` button should be displayed at the bottom of the vertical nav.
+
+### [ ] TK-006 > Front End > Display a Series of _Ticket Escalation_ Devices on the Dashboard
+
+#### Story
+
+- As a user, I want to see _Ticket Escalation_ devices on the dashboard, so I can monitor those metrics.
+
+#### Acceptance Criteria
+
+- 5 _Ticket Escalation_ devices are displayed, with the following details.
+  1. {title: "NEW", color: "Cyan", count: 25 }
+  1. {title: "MANAGER FEEDBACK", color: "blue", count: 5 }
+  1. {title: "PROCESSING", color: "yellow", count: 3 }
+  1. {title: "AWAITING FEEDBACK", color: "red", count: 2 }
+  1. {title: "APPROVED", color: "green", count: 15 }
+- On Desktop, the devices should be displayed side by side.
+- On Mobile, the devices should be displayed stacked vertically.
+
+### [ ] TK-007 > Front End > Build a _Percentage Chart_ Component
+
+#### Story
+
+- As a developer, I want to create a _Pipeline Chart_, so we can add this to our library of data-visualization components in the _Playbook Design System_.
+
+#### Acceptance Criteria
+
+- The component accepts a percentage as a prop.
+- The component renders the percentage as a horizontal bar, filled according to the percentage provided.
+- The percentage is displayed next to the bar, right-hand justified.
+
+### [ ] TK-008 > Front End > Add a _Pipeline Chart_ Device
+
+#### Story
+
+- As a user, I want to see a _Pipeline Chart_ device, sod I can monitor the corresponding metrics.
+
+#### Acceptance Criteria
+
+- This can built starting with the [Default List](https://playbook.powerapp.cloud/kits/list/react#default) component from the _Playbook Design System_.
+- Each row in the device includes the following.
+  - A title.
+  - A Percentage Chart indicating the corresponding percentage.
+  - A total count.
+- The device is rendered below the _Ticket Escalations_ section.
+
+### [ ] TK-009 > Front End > Add a _Ticket Metric_ Component
+
+#### Story
+
+- As a developer, I want to create a _Ticket Metric_ component to the system, so I can use it within the _Ticket Metrics_ device.
+
+#### Acceptance Criteria
+
+- The device includes 4 sections, each displaying the following.
+  - Title.
+  - Count.
+  - Icon.
+  - Color.
+
+### [ ] TK-010 > Front End > Add a _Ticket Metrics_ Device
+
+#### Story
+
+- As a user, I want to see a _Ticket Metrics_ device on the dashboard, so I can monitor the corresponding metrics.
+
+#### Acceptance Criteria
+
+- The device includes the following 4 sections, each rendered using the _Ticket Metric_ component.
+  - { title: "Tickets (YTD)", count: 1,426, icon: ticket, color: green }
+  - { title: "Overdue (YTD)", count: 25, icon: cancel, color: red }
+  - { title: "Closed Without Action (YTD)", count: 97, icon: checklist, color: blue }
+  - { title: "Esculated (YTD)", count: 896, icon: alert, color: yellow }
+- On Desktop, the device is rendered to the right of the _Pipeline Chart_ device.
+- On Mobile, the device is rendered below the _Pipeline Chart_ device.
+
+### [ ] TK-011 > Back End > Initialize the Application
+
+#### Story
+
+- As a developer, I need to initialize a Rails application with React and Playbook tooling amiable on the front, so I can start building Dashboard functionality.
+
+#### Acceptance Criteria
+
+- This can built starting with the [Default List](https://playbook.powerapp.cloud/kits/list/react#default) component from the _Playbook Design System_.
+- Each row in the device includes the following.
+  - A title.
+  - A _Percentage Chart_ indicating the corresponding percentage.
+  - A total count.
+- The device is rendered below the _Ticket Escalations_ section.
+
+### [ ] TK-012 > Back End > Serve Dashboard Data via Rails
+
+#### Story
+
+- As a developer, I want to serve all the dashboard data via Rails, so it behaves more like a real web application.
+
+#### Acceptance Criteria
+
+- The following data is seeded, served via API, and consumed by the React front-end application.
+  - Users.
+    - Total: 15.
+    - Includes:
+      - Name.
+      - Initials.
+      - Avatar.
+  - Key Performance Indicators:
+    - _Revenue_ metrics.
+    - Percentage change for _Orders_.
+    - Percentage change for _Average Check_.
+    - Percentage change for _Canceled_.
+  - Ticket Escalations:
+    - _New_.
+      - 25 total.
+    - _Manager Feedback_.
+      - 5 total.
+    - _Processing_.
+      - 3 total.
+    - _Awaiting Feedback_.
+      - 2 total.
+    - _Approved_.
+      - 15 total.
+  - Pipeline Chart:
+    - _Add to Cart_.
+      - 100%.
+      - 2,577 total.
+    - _Shopping Cart_.
+      - 79%.
+      - 2,023 total.
+    - _Payment Methods_.
+      - 59%.
+      - 1,567 total.
+    - _Delivery Methods_.
+      - 56%.
+      - 1,252 total.
+    - _Confirm_.
+      - 49%.
+      - 1,182 total.
+    - _Delivery_.
+      - 46%.
+      - 1,098 total.
+  - Ticket Metrics:
+    - _Tickets_.
+      - 1,426 total.
+    - _Overdue_.
+      - 25 total.
+    - _Closed Without Action_.
+      - 97 total.
+    - _Escalated_.
+      - 896 total.
