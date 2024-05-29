@@ -5,10 +5,11 @@ import { Nav, NavItem } from 'playbook-ui';
 const NavMain = () => {
   return (
     <>
-      <div className="d-flex justify-content-between w-75 m-auto">
+      <div className="w-100 border-bottom-thin">
         <Nav
           link="#"
           orientation="horizontal"
+          className="w-75 m-auto"
         >
           <NavItem
             active

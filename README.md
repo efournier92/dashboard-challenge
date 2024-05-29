@@ -98,7 +98,7 @@
   - An inbox indicator with an inbox badge to count messages.
   - A user icon with a user name, avatar, and drop-down arrow.
 
-### [ ] TK-002 > Front End > Create a _Navigation Bar_ Component
+### [X] TK-002 > Front End > Create a _Navigation Bar_ Component
 
 #### Story
 
