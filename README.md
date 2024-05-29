@@ -218,7 +218,7 @@
 - On Desktop, the devices should be displayed side by side.
 - On Mobile, the devices should be displayed stacked vertically.
 
-### [ ] TK-007 > Front End > Build a _Percentage Chart_ Component
+### [X] TK-007 > Front End > Build a _Percentage Chart_ Component
 
 #### Story
 
@@ -226,11 +226,15 @@
 
 #### Acceptance Criteria
 
-- The component accepts a percentage as a prop.
+- The component accepts the following props:
+  - Title.
+  - Percentage.
+  - Total Count
 - The component renders the percentage as a horizontal bar, filled according to the percentage provided.
-- The percentage is displayed next to the bar, right-hand justified.
+- The title is displayed to the left of the percentage bar.
+- The total count is displayed all the way to the right of the component.
 
-### [ ] TK-008 > Front End > Add a _Pipeline Chart_ Device
+### [X] TK-008 > Front End > Add a _Pipeline Chart_ Device
 
 #### Story
 

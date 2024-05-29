@@ -5,6 +5,7 @@ import NavMain from './NavMain';
 import DashboardTitle from './DashboardTitle';
 import KpiDevice from './devices/KpiDevice';
 import TicketEscalationsDevice from './devices/TicketEscalationsDevice';
+import PipelineChartDevice from './devices/PipelineChartDevice';
 import { ticketEscalations } from '../data/TicketEscalationsData';
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           <div className="w-75 m-auto">
             <DashboardTitle />
             <KpiDevice />
+            {/* TODO: Abstract to container */}
             <div className="ticket-escalations-title d-flex justify-content-center">
               THIS WEEK'S TICKET ESCALATIONS
             </div>
@@ -28,6 +30,11 @@ const App = () => {
                   />
                 </div>
               ))}
+            </div>
+            <div className="row">
+              <div className="col-lg-6">
+                <PipelineChartDevice />
+              </div>
             </div>
           </div>
         </div>
