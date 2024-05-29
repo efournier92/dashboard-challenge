@@ -63,6 +63,18 @@
 
 - TODO
 
+### Titles
+
+- I found myself overriding styling from the `Title` component.
+
+### Line Chart
+
+- The example in the screenshot seemed eroneous.
+  - The top value on the y axis is `12/15`.
+  - The right-most value on x axis goes back to `11/15`.
+  - The line does not have a data point for mid-month dates.
+    - _This seems divergent from the default behavior of the component._
+
 ## Feature Stories
 
 ### [X] TK-000 > Back End > Initialize the Application
@@ -114,7 +126,7 @@
   - Settings.
 - The `Dashboard` option is selected by default.
 
-### [ ] TK-003 > Front End > Add a _Title_ to the Dashboard
+### [X] TK-003 > Front End > Add a _Title_ to the Dashboard
 
 #### Story
 
@@ -126,7 +138,7 @@
 - A subtitle, above the main title, reads _DASHBOARD_.
   - This subtitle is left-hand justified.
 
-### [ ] TK-004 > Front End > Add a Device for displaying Key Performance Indicators
+### [X] TK-004 > Front End > Add a Device for displaying Key Performance Indicators
 
 #### Story
 
@@ -153,7 +165,7 @@
     - Up is indicated with in green with an upward-facing arrow.
     - Down is indicated with in red with an downward-facing arrow.
   - In desktop, this rendered on the left-hand side of the line graph.
-  - In mobile, this rendered on the below the line graph.
+  - In mobile, this rendered on the above the line graph.
 - The device includes a line graph.
   - Built using the [Line Graph](https://playbook.powerapp.cloud/kits/line_graph/react) component from the _Playbook Design System_.
   - The vertical axis indicates the value.

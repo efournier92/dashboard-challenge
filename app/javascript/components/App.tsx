@@ -3,6 +3,7 @@ import WebpackerReact from 'webpacker-react';
 import NavTop from './NavTop';
 import NavMain from './NavMain';
 import DashboardTitle from './DashboardTitle';
+import KpiDevice from './devices/KpiDevice';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <NavMain />
       <div className="dashboard-background">
         <DashboardTitle />
+        <KpiDevice />
       </div>
     </>
   );

@@ -1,11 +1,10 @@
 import React from 'react';
-
 import { Nav, NavItem } from 'playbook-ui';
 
 const NavMain = () => {
   return (
     <>
-      <div className="w-100 border-bottom-thin white">
+      <div className="w-100 border-thin-bottom white">
         <Nav
           link="#"
           orientation="horizontal"

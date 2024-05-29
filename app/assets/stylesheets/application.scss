@@ -43,6 +43,7 @@ body {
 
 .dashboard-title-container {
   padding-top: 2.5em;
+  margin-bottom: 1em;
 }
 
 .dashboard-title {
@@ -57,16 +58,65 @@ body {
   font-size: 2.2em !important;
 }
 
+.kpi-title-container {
+  @extend .border-thin-bottom;
+  height: 4em;
+}
+
+.kpi-title-content-container {
+  margin-top: 0.75em;
+  padding: 0 1em;
+}
+
+.kpi-graph-container {
+  padding-top: 3em;
+}
+
+.kpi-nav-item {
+  // height: 5em;
+}
+
+.kpi-title {
+  font-size: 0.9em !important;
+}
+
+.kpi-metric-color-up {
+  color: #2fd48e;
+}
+
+.kpi-metric-color-down {
+  color: #ff4b51;
+}
+
+.kpi-nav-items-container {
+  @extend .border-thin-right;
+  padding-right: 0 !important;
+}
+
 .white {
-  color: #ffffff !important;
+  background: #ffffff !important;
 }
 
 .gray {
   color: gray;
 }
 
-.border-bottom-thin {
+.kpi-container {
+  @extend .border-thin-around;
+  @extend .white;
+  border-radius: 6px;
+}
+
+.border-thin-around {
   border: 1px solid #e4e8f0;
+}
+
+.border-thin-bottom {
+  border-bottom: 1px solid #e4e8f0;
+}
+
+.border-thin-right {
+  border-right: 1px solid #e4e8f0;
 }
 
 // TODO: Use specificity over important

@@ -9,7 +9,7 @@ const NavTop = () => {
         link="#"
         orientation="horizontal"
         variant="subtle"
-        className="border-bottom-thin white"
+        className="border-thin-bottom white"
       >
         <div className="d-flex justify-content-between w-75 m-auto">
           <div className="d-flex">
