@@ -257,11 +257,12 @@
 
 #### Acceptance Criteria
 
-- The device includes 4 sections, each displaying the following.
-  - Title.
-  - Count.
-  - Icon.
-  - Color.
+- This can built starting with the [Default List](https://playbook.powerapp.cloud/kits/list/react#default) component from the _Playbook Design System_.
+- Each row in the device includes the following.
+  - A title.
+  - A _Percentage Chart_ indicating the corresponding percentage.
+  - A total count.
+- The device is rendered below the _Ticket Escalations_ section.
 
 ### [X] TK-010 > Front End > Add a _Ticket Metrics_ Device
 
@@ -279,20 +280,18 @@
 - On Desktop, the device is rendered to the right of the _Pipeline Chart_ device.
 - On Mobile, the device is rendered below the _Pipeline Chart_ device.
 
-### [ ] TK-011 > Back End > Initialize the Application
+### [X] TK-011 > Back End > Integrate GraphQL on the Server Side
 
 #### Story
 
-- As a developer, I need to initialize a Rails application with React and Playbook tooling amiable on the front, so I can start building Dashboard functionality.
+- As a developer, I want to add GraphQL to the Rails back end, so I can use it to communicate data with the front end.
 
 #### Acceptance Criteria
 
-- This can built starting with the [Default List](https://playbook.powerapp.cloud/kits/list/react#default) component from the _Playbook Design System_.
-- Each row in the device includes the following.
-  - A title.
-  - A _Percentage Chart_ indicating the corresponding percentage.
-  - A total count.
-- The device is rendered below the _Ticket Escalations_ section.
+- GraphQL is installed and integrated with the server-side Rails application.
+- GraphQL has been configured to serve the following data.
+  - Users.
+  - Ticket escalations.
 
 ### [ ] TK-012 > Back End > Serve Dashboard Data via Rails
 
