@@ -51,3 +51,26 @@ User.create(
     },
   ]
 )
+
+escalationTitles = ['Missing part', 'Not perform...', 'Unexpected...', 'Not Techn...']
+escalationTypes = [
+  { category: 'new', instances_to_create: 25 },
+  { category: 'manager_feedback', instances_to_create: 5 },
+  { category: 'processing', instances_to_create: 3 },
+  { category: 'awaiting_feedback', instances_to_create: 2 },
+  { category: 'approved', instances_to_create: 15 },
+]
+
+escalationTypes.each do |type|
+  type[:instances_to_create].times do
+    TicketEscalation.create(
+      [
+        {
+          user_id: rand(1..User.count),
+          title: escalationTitles.sample,
+          category: type[:category],
+        }
+      ]
+    )
+  end
+end

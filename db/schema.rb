@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_30_005251) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_30_010346) do
+  create_table "ticket_escalations", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "category"
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_ticket_escalations_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "gender"
@@ -18,4 +27,5 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_30_005251) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "ticket_escalations", "users"
 end
