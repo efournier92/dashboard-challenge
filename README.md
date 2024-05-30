@@ -249,7 +249,7 @@
   - A total count.
 - The device is rendered below the _Ticket Escalations_ section.
 
-### [ ] TK-009 > Front End > Add a _Ticket Metric_ Component
+### [X] TK-009 > Front End > Add a _Ticket Metric_ Component
 
 #### Story
 
@@ -263,7 +263,7 @@
   - Icon.
   - Color.
 
-### [ ] TK-010 > Front End > Add a _Ticket Metrics_ Device
+### [X] TK-010 > Front End > Add a _Ticket Metrics_ Device
 
 #### Story
 

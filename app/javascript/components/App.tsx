@@ -6,6 +6,7 @@ import DashboardTitle from './DashboardTitle';
 import KpiDevice from './devices/KpiDevice';
 import TicketEscalationsDevice from './devices/TicketEscalationsDevice';
 import PipelineChartDevice from './devices/PipelineChartDevice';
+import TicketMetricsDevice from './devices/TicketMetricsDevice';
 import { ticketEscalations } from '../data/TicketEscalationsData';
 
 const App = () => {
@@ -34,6 +35,9 @@ const App = () => {
             <div className="row">
               <div className="col-lg-6">
                 <PipelineChartDevice />
+              </div>
+              <div className="col-lg-6">
+                <TicketMetricsDevice />
               </div>
             </div>
           </div>
