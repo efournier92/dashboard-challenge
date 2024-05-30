@@ -18,7 +18,7 @@
   - [Local](#local)
     - [Root](#root)
     - [Graphiql > Sandbox IDE](#graphiql--sandbox-ide)
-- [Areas for Improvment](#areas-for-improvment)
+- [Areas for Improvement](#areas-for-improvement)
   - [Line Chart](#line-chart)
   - [Icons](#icons)
   - [Typescript](#typescript)
