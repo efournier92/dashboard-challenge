@@ -351,3 +351,15 @@
       - 97 total.
     - _Escalated_.
       - 896 total.
+
+### [ ] TK-013 > Back End > Integrate Apollo Client with the React Front End
+
+#### Story
+
+- As a developer, I want to install the `Apollo Client` package, so I can consume it from the React front-end application.
+
+#### Acceptance Criteria
+
+- The following packages are available and integrated with React.
+  - `@apollo/client`
+  - `graphql`

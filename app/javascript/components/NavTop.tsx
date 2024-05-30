@@ -1,7 +1,8 @@
 import React from 'react';
 import { Nav, Title, Badge, User, Image } from 'playbook-ui';
+import { getAvatarUrl } from '../services/AvatarService';
 
-const NavTop = () => {
+const NavTop = ({ user }) => {
   return (
     <>
       <Nav
@@ -55,19 +56,22 @@ const NavTop = () => {
                 className="mx-2"
               />
             </div>
-            <div className="d-flex align-items-center">
+            <div className="nav-top-user-info d-flex align-items-center">
               <Title
                 bold={true}
                 size={4}
                 tag="div"
-                text="Indira Shree"
+                text={user.name}
                 className="px-2 font-smaller"
               />
-              <User
-                align="right"
-                avatarUrl="https://randomuser.me/api/portraits/women/53.jpg"
-                size="sm"
-              />
+              <div className="nav-top-user-avatar">
+                <User
+                  align="right"
+                  name={user.name}
+                  avatarUrl={getAvatarUrl(user.id, user.gender)}
+                  size="sm"
+                />
+              </div>
               <i className="fa-solid fa-chevron-down gray icon-xs"></i>
             </div>
           </div>
