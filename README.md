@@ -115,7 +115,7 @@ yarn watch
 
 - http://localhost:3000/graphiql
 
-## Areas for Improvment
+## Areas for Improvement
 
 ### Line Chart
 
