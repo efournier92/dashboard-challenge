@@ -1,5 +1,5 @@
 import './NavTop.scss';
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Nav,
   Title,
@@ -8,10 +8,17 @@ import {
   Image,
   Flex,
   SectionSeparator,
+  Dialog,
+  Button,
 } from 'playbook-ui';
 import { getAvatarUrl } from '../services/AvatarService';
 
 const NavTop = ({ user }) => {
+  const [isUserDialongOpen, setIsUserDialogOpen] = useState(false);
+  const closeUserDialog = () => setIsUserDialogOpen(false);
+  const openUserDialog = () => {
+    setIsUserDialogOpen(true);
+  };
   return (
     <>
       <Flex
@@ -69,34 +76,58 @@ const NavTop = ({ user }) => {
               className="mx-2"
             />
           </Flex>
-          <Flex
-            orientation="row"
-            align="center"
-            cursor="pointer"
-            className="nav-top-user-info"
-          >
-            <Title
-              bold={true}
-              size={4}
-              tag="div"
-              text={user.name}
-              padding="sm"
-              className="font-smaller"
-              cursor="hover"
-            />
-            <div className="nav-top-user-avatar">
-              <User
-                align="right"
-                name={user.name}
-                avatarUrl={getAvatarUrl(user.id, user.gender)}
-                size="sm"
+          <div onClick={openUserDialog}>
+            <Flex
+              orientation="row"
+              align="center"
+              cursor="pointer"
+              className="nav-top-user-info"
+            >
+              <Title
+                bold={true}
+                size={4}
+                tag="div"
+                text={user.name}
+                padding="sm"
+                className="font-smaller"
               />
-            </div>
-            <i className="fa-solid fa-chevron-down gray icon-xs"></i>
-          </Flex>
+              <div className="nav-top-user-avatar">
+                <User
+                  align="right"
+                  name={user.name}
+                  avatarUrl={getAvatarUrl(user.id, user.gender)}
+                  size="sm"
+                />
+              </div>
+              <i className="fa-solid fa-chevron-down gray icon-xs"></i>
+            </Flex>
+          </div>
         </Flex>
       </Flex>
       <SectionSeparator />
+      <Dialog
+        cancelButton="Cancel Button"
+        onClose={closeUserDialog}
+        opened={isUserDialongOpen}
+        size="md"
+      >
+        <Dialog.Body>
+          <User
+            align="center"
+            orientation="vertical"
+            size="lg"
+            name={user.name}
+            title="Employee"
+            avatarUrl={getAvatarUrl(user.id, user.gender)}
+          />
+          <Flex
+            justify="center"
+            marginTop="md"
+          >
+            <Button onClick={closeUserDialog}>{'Close'}</Button>
+          </Flex>
+        </Dialog.Body>
+      </Dialog>
     </>
   );
 };

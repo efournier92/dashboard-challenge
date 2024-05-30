@@ -1,15 +1,44 @@
 # Dashboard Challenge
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Design Philosophy](#design-philosophy)
+  - [Development Approach](#development-approach)
+  - [Technologies Utlized](#technologies-utlized)
+  - [Sources](#sources)
+- [Challenge Requirements](#challenge-requirements)
+- [Project Details](#project-details)
+  - [Dependencies](#dependencies)
+  - [Running the Application](#running-the-application)
+- [Areas for Improvement](#areas-for-improvement)
+  - [Line Chart](#line-chart)
+  - [Icons](#icons)
+  - [Typescript](#typescript)
+  - [Pixel Perfection](#pixel-perfection)
+  - [Mobile Support](#mobile-support)
+- [Feature Stories](#feature-stories)
+
 ## Overview
 
 - This application was built to demonstrate my competence with Rails, React, and component-based UI libraries.
 
-## Approach
+## Design Philosophy
+
+### Development Approach
 
 - In order to give structure to the development process and demonstrate my business-oriented approach, I began by scoping out [Feature Stories](#feature-stories) in the section below.
   - The [Commit History](https://github.com/efournier92/dashboard-challenge/commits/master/) against this repo reflects my adherence to this discipline.
 
-## Sources
+### Technologies Utilized
+
+- Rails
+- React
+- Playbook Design System
+- TypeScript
+- GraphQL
+
+### Sources
 
 - The initial commit was sourced from the following example repository.
   - [Power Home Remodeling > Playbook > React Rails Example](https://github.com/powerhome/playbook/tree/master/examples/rails-react-example)
@@ -28,9 +57,9 @@
 - SCSS syntax should be used for all styles.
 - Ensure the page displays correctly in multiple browsers.
 - Test for responsiveness (mobile).
-- Match the mockup.
+- Match the mock up.
   - The layout should be **pixel-perfect** as a showcase of UI talent and attention to detail.
-  - _Be sure the match the mockup 100%, before adding any extra flair._
+  - _Be sure the match the mock up 100%, before adding any extra flair._
 - Add a click action to your UI.
   - Examples:
     - Display our dialog kit or a popover with any additional data you like.
@@ -59,28 +88,34 @@
 
 ## Areas for Improvment
 
-### Icons
-
-- TODO
-
-### Titles
-
-- I found myself overriding styling from the `Title` component.
-
 ### Line Chart
 
-- The example in the screenshot seemed eroneous.
+- The line-chart example given in the screenshot provided seems erroneous in a few different ways.
   - The top value on the y axis is `12/15`.
   - The right-most value on x axis goes back to `11/15`.
   - The line does not have a data point for mid-month dates.
-    - _This seems divergent from the default behavior of the component._
+    - _To me, this seems divergent from the default behavior of the component._
+
+### Icons
+
+- For some reason, not all the font-awesome icons I needed were available, and instead display with an `X` symbol.
+  - _I believe the mock up called for some icons that are only available in the Pro version._
 
 ### Typescript
 
-- Not using it effectively.
-  - Hit compiler issues.
-  - Deferred resolving.
-  - TODO
+- I faced transpiler errors around leveraging TypeScript-specific functionality, which I did not expent bandwidth to resolve.
+  - _It's worth noting that I'm a fan of TS, and would have rather used it, but it did not seem instrumental to this excercise, given the requirements neglect to mention it at all._
+
+### Pixel Perfection
+
+- It would be inaccurate to claim my layout matches the screenshot provided.
+  - While I'm certain I could have gotten there, I needed to time box this exercise to some extent.
+  - I feel the work I've done here is adequately indicative of my abilities, and proves I'm highly competent with both front-end and back-end technologies.
+
+### Mobile Support
+
+- As with pixel perfection, my time-boxing of this exercise precluded my creating a perfectly responsive layout.
+  - Were I to cut back into it at some point, now with a better understanding of the Playbook system, I feel confident I could adjust it to be a fully responsive layout.
 
 ## Feature Stories
 
@@ -371,7 +406,7 @@
   - `@apollo/client`
   - `graphql`
 
-### [ ] TK-014 > Front End > Add a Click Action to Display a User-Details Popover
+### [X] TK-014 > Front End > Add a Click Action to Display a User-Details Popover
 
 #### Story
 
@@ -399,7 +434,7 @@
 - SVG images has been located and hosted for each relevant icon.
 - All icons indicated in the mockup screenshot render correctly on the dashboard.
 
-### [ ] TK-016 > Front End > Deprecate Bootstrap in Favor of Playbook Layouts
+### [X] TK-016 > Front End > Deprecate Bootstrap in Favor of Playbook Layouts
 
 #### Story
 
