@@ -8,6 +8,7 @@ import TicketMetricsDevice from './devices/TicketMetricsDevice';
 import { useQuery } from '@apollo/client';
 import { GET_USER_BY_ID } from '../services/QueryService';
 import TicketEscalationsContainer from './TicketEscalationsContainer';
+import { Layout } from 'playbook-ui';
 
 const DashboardMain = () => {
   const getCurrentUserQuery = useQuery(GET_USER_BY_ID, {
@@ -29,14 +30,14 @@ const DashboardMain = () => {
             <DashboardTitle />
             <KpiDevice />
             <TicketEscalationsContainer />
-            <div className="row">
-              <div className="col-lg-6">
+            <Layout Layout="collection">
+              <Layout.Body>
                 <PipelineChartDevice />
-              </div>
-              <div className="col-lg-6">
+              </Layout.Body>
+              <Layout.Body>
                 <TicketMetricsDevice />
-              </div>
-            </div>
+              </Layout.Body>
+            </Layout>
           </div>
         </div>
       </div>

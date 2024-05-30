@@ -1,0 +1,36 @@
+@import '../../styles/CommonStyles.scss';
+
+.kpi-title-container {
+  @extend .border-thin-bottom;
+  height: 4em;
+}
+
+.kpi-title-content-container {
+  margin-top: 0.75em;
+  padding: 0 1em;
+}
+
+.kpi-graph-container {
+  padding-top: 3em;
+}
+
+.kpi-nav-item {
+  // height: 5em;
+}
+
+.kpi-title {
+  font-size: 0.9em !important;
+}
+
+.kpi-metric-color-up {
+  color: #2fd48e;
+}
+
+.kpi-metric-color-down {
+  color: #ff4b51;
+}
+
+.kpi-nav-items-container {
+  @extend .border-thin-right;
+  padding-right: 0 !important;
+}

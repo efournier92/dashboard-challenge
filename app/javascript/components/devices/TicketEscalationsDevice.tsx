@@ -1,5 +1,6 @@
+import './TicketEscalationsDevice.scss';
 import React from 'react';
-import { List, ListItem, Badge } from 'playbook-ui';
+import { List, ListItem, Badge, Flex } from 'playbook-ui';
 import TicketEscalationListItem from './TicketEscalationListItem';
 import { getAvatarUrl } from '../../services/AvatarService';
 
@@ -13,20 +14,23 @@ const TicketEscalationsDevice = ({ ticketEscalations }) => {
       <div className="ticket-escalations-device-container">
         <List>
           <ListItem
-            className={
-              'ticket-escalations-header d-flex justify-content-between align-items-center px-3 border-color-' +
-              colorVariant
-            }
+            padding="md"
+            className={'ticket-escalations-header border-color-' + colorVariant}
           >
-            <div className="font-subtitle">{title.toUpperCase()}</div>
-            <div className="">
-              <Badge
-                text={totalEscalations}
-                variant={colorVariant}
-                rounded="true"
-                className="ticket-escalations-header-badge"
-              />
-            </div>
+            <Flex
+              justify="between"
+              align="center"
+            >
+              <div className="font-subtitle">{title.toUpperCase()}</div>
+              <div className="">
+                <Badge
+                  text={totalEscalations}
+                  variant={colorVariant}
+                  rounded="true"
+                  className="ticket-escalations-header-badge"
+                />
+              </div>
+            </Flex>
           </ListItem>
           {escalations.map((escalation) => (
             <TicketEscalationListItem
@@ -41,9 +45,13 @@ const TicketEscalationsDevice = ({ ticketEscalations }) => {
           ))}
         </List>
         {totalEscalations > 6 && (
-          <ListItem className="ticket-escalations-footer d-flex justify-content-center align-items-center">
+          <Flex
+            className="ticket-escalations-footer"
+            justify="center"
+            align="center"
+          >
             <div className="show-more">Show More</div>
-          </ListItem>
+          </Flex>
         )}
       </div>
     </>

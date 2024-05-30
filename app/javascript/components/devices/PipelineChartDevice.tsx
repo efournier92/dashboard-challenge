@@ -1,14 +1,19 @@
+import './PipelineChartDevice.scss';
 import React from 'react';
+import { Flex, Card } from 'playbook-ui';
 import { pipelineData } from '../../data/PipelineData';
 import PercentageChartDevice from './PercentageChartDevice';
 
 const PipelineChartDevice = () => {
   return (
     <>
-      <div className="device-container">
-        <div className="pipeline-chart-header d-flex align-items-center">
+      <Card className="device-container">
+        <Flex
+          align="center"
+          className="pipeline-chart-header"
+        >
           Pipeline Chart
-        </div>
+        </Flex>
         {pipelineData.map((metric, index) => (
           <PercentageChartDevice
             key={index}
@@ -17,7 +22,7 @@ const PipelineChartDevice = () => {
             percentage={metric.percentageComplete}
           />
         ))}
-      </div>
+      </Card>
     </>
   );
 };

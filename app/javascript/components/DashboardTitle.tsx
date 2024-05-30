@@ -1,3 +1,4 @@
+import './DashboardTitle.scss';
 import React from 'react';
 import { Title } from 'playbook-ui';
 

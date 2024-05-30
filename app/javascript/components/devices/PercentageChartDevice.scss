@@ -1,0 +1,33 @@
+@import '../../styles/CommonStyles.scss';
+
+.percentage-chart-bar-container {
+  width: 55%;
+}
+
+.percentage-chart-bar {
+  border-bottom: 8px solid #0056cf;
+  border-radius: 28px;
+}
+
+.percentage-chart-title {
+  @extend .font-subtitle;
+  margin-left: 1em;
+  font-size: 0.9em !important;
+}
+
+.percentage-chart-label {
+  padding-left: 1em;
+  font-size: 0.9em;
+  font-weight: $lighter !important;
+}
+
+.percentage-chart-device {
+  @extend .border-thin-bottom;
+  margin: 0 !important;
+  width: 100%;
+  height: 4em;
+}
+
+.percentage-chart-count {
+  font-size: 1.2em;
+}

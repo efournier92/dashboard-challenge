@@ -1,0 +1,8 @@
+@import '../../styles/CommonStyles.scss';
+
+.pipeline-chart-header {
+  @extend .border-thin-bottom;
+  font-weight: bold;
+  height: 5em;
+  padding-left: 2em;
+}

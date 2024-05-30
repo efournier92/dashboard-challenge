@@ -1,16 +1,14 @@
 import React from 'react';
 import { ticketMetricsData } from '../../data/TicketMetricsData';
 import TicketMetricTile from '../TicketMetricTile';
+import { Card } from 'playbook-ui';
 
 const TicketMetricsDevice = () => {
   return (
     <>
-      <div className="row">
+      <Card>
         {Object.keys(ticketMetricsData).map((metric, index) => (
-          <div
-            className="col-6"
-            key={index}
-          >
+          <div key={index}>
             <TicketMetricTile
               label={ticketMetricsData[metric].label}
               count={ticketMetricsData[metric].count}
@@ -19,7 +17,7 @@ const TicketMetricsDevice = () => {
             />
           </div>
         ))}
-      </div>
+      </Card>
     </>
   );
 };

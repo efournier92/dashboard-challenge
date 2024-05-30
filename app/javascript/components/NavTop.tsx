@@ -1,5 +1,6 @@
+import './NavTop.scss';
 import React from 'react';
-import { Nav, Title, Badge, User, Image } from 'playbook-ui';
+import { Nav, Title, Badge, User, Image, Flex } from 'playbook-ui';
 import { getAvatarUrl } from '../services/AvatarService';
 
 const NavTop = ({ user }) => {
@@ -11,8 +12,12 @@ const NavTop = ({ user }) => {
         variant="subtle"
         className="border-thin-bottom white"
       >
-        <div className="d-flex justify-content-between w-75 m-auto">
-          <div className="d-flex">
+        <Flex
+          justify="between"
+          align="center"
+          className="w-75 m-auto"
+        >
+          <Flex>
             <div>
               <Image
                 alt="PB&J Icon"
@@ -21,7 +26,10 @@ const NavTop = ({ user }) => {
                 className="mx-2"
               />
             </div>
-            <div className="d-flex flex-column mt-2">
+            <Flex
+              orientation="column"
+              className="mt-2"
+            >
               <Title
                 bold={false}
                 size={3}
@@ -37,32 +45,42 @@ const NavTop = ({ user }) => {
                 text="INTERNATIONAL"
                 className="font-subtitle"
               />
-            </div>
-          </div>
-          <div className="d-flex align-items-center">
-            <div className="d-flex align-items-center px-3">
+            </Flex>
+          </Flex>
+          <Flex align="center">
+            <Flex align="center">
               <i className="fa-regular fa-bell gray"></i>
               <Badge
                 text="4"
                 variant="primary"
                 className="mx-2"
               />
-            </div>
-            <div className="d-flex align-items-center px-3">
+            </Flex>
+            <Flex
+              align="center"
+              padding="xl"
+            >
               <i className="fa-solid fa-inbox gray"></i>
               <Badge
                 text="2"
                 variant="primary"
                 className="mx-2"
               />
-            </div>
-            <div className="nav-top-user-info d-flex align-items-center">
+            </Flex>
+            <Flex
+              orientation="row"
+              align="center"
+              cursor="pointer"
+              className="nav-top-user-info"
+            >
               <Title
                 bold={true}
                 size={4}
                 tag="div"
                 text={user.name}
-                className="px-2 font-smaller"
+                padding="sm"
+                className="font-smaller"
+                cursor="hover"
               />
               <div className="nav-top-user-avatar">
                 <User
@@ -73,9 +91,9 @@ const NavTop = ({ user }) => {
                 />
               </div>
               <i className="fa-solid fa-chevron-down gray icon-xs"></i>
-            </div>
-          </div>
-        </div>
+            </Flex>
+          </Flex>
+        </Flex>
       </Nav>
     </>
   );

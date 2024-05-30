@@ -1,24 +1,31 @@
+import './TicketMetricTile.scss';
 import React from 'react';
-import { IconCircle } from 'playbook-ui';
+import { IconCircle, Flex, Card } from 'playbook-ui';
 
 const TicketMetricTile = ({ label, count, colorVariant, icon }) => {
   return (
     <>
-      <div className="ticket-metric-tile device-container row">
-        <div className="d-flex align-items-center col-5">
+      <Card className="ticket-metric-tile">
+        <Flex
+          align="center"
+          className="col-5"
+        >
           <IconCircle
             icon={icon}
             variant={colorVariant}
             size="xl"
           />
-        </div>
-        <div className="d-flex align-items-center col-7">
-          <div className="d-flex flex-column">
+        </Flex>
+        <Flex
+          align="center"
+          className="col-7"
+        >
+          <Flex orientation="column">
             <div className="ticket-metric-count">{count}</div>
             <div className="ticket-metric-label">{label}</div>
-          </div>
-        </div>
-      </div>
+          </Flex>
+        </Flex>
+      </Card>
     </>
   );
 };

@@ -1,5 +1,15 @@
+import './KpiDevice.scss';
 import React from 'react';
-import { Nav, NavItem, Title, CircleIconButton, LineGraph } from 'playbook-ui';
+import {
+  Nav,
+  NavItem,
+  Title,
+  CircleIconButton,
+  LineGraph,
+  Flex,
+  Layout,
+  Card,
+} from 'playbook-ui';
 
 const KpiDevice = () => {
   const revenueByDate = {
@@ -37,7 +47,11 @@ const KpiDevice = () => {
             link="#"
             orientation="horizontal"
           >
-            <div className="kpi-title-content-container d-flex w-100 justify-content-between align-items-center">
+            <Flex
+              justify="between"
+              align="center"
+              className="kpi-title-content-container w-100"
+            >
               <Title
                 bold={true}
                 tag="h6"
@@ -49,12 +63,12 @@ const KpiDevice = () => {
                 icon="ellipsis"
                 variant="secondary"
               />
-            </div>
+            </Flex>
           </Nav>
         </div>
-        <div className="row">
+        <Layout layout="collection_detail">
           {/* TODO: Abstract KpiNavItems container */}
-          <div className="col-lg-3 kpi-nav-items-container">
+          <Card className="kpi-nav-items-container">
             <Nav highlight={false}>
               {/* TODO: Abstract KpiNavItem component */}
               {/* TODO: Dynamically Iterate on KpiNavItem components here */}
@@ -63,25 +77,25 @@ const KpiDevice = () => {
                 link="#"
                 className="kpi-nav-item"
               >
-                <div className="d-flex justify-content-between">
+                <Flex justify="between">
                   <div>Revenue</div>
                   <div className="kpi-metric-color-up">
                     <i className="fa-solid fa-arrow-up mx-2"></i>
                     26%
                   </div>
-                </div>
+                </Flex>
               </NavItem>
               <NavItem
                 link="#"
                 className="kpi-nav-item"
               >
-                <div className="d-flex justify-content-between">
+                <Flex justify="between">
                   <div>Orders</div>
                   <div className="kpi-metric-color-down">
                     <i className="fa-solid fa-arrow-down mx-2"></i>
                     2%
                   </div>
-                </div>
+                </Flex>
               </NavItem>
               <NavItem
                 link="#"
@@ -92,25 +106,25 @@ const KpiDevice = () => {
                 link="#"
                 className="kpi-nav-item"
               >
-                <div className="d-flex justify-content-between">
+                <Flex justify="between">
                   <div>Average Check</div>
                   <div className="kpi-metric-color-up">
                     <i className="fa-solid fa-arrow-up mx-2"></i>
                     5%
                   </div>
-                </div>
+                </Flex>
               </NavItem>
               <NavItem
                 link="#"
                 className="kpi-nav-item"
               >
-                <div className="d-flex justify-content-between">
+                <Flex justify="between">
                   <div>Cancelled</div>
                   <div className="kpi-metric-color-down">
                     <i className="fa-solid fa-arrow-down mx-2"></i>
                     18%
                   </div>
-                </div>
+                </Flex>
               </NavItem>
               <NavItem
                 link="#"
@@ -118,18 +132,17 @@ const KpiDevice = () => {
                 className="kpi-nav-item"
               />
             </Nav>
-          </div>
+          </Card>
           {/* TODO: Abstract KpiGraph component */}
-          <div className="col-lg-9 kpi-graph-container">
+          <Layout.Body>
             <LineGraph
               chartData={chartData}
               xAxisCategories={Object.keys(revenueByDate)}
               yAxisMin={0}
               yAxisMax={200000}
-              height="35%"
             />
-          </div>
-        </div>
+          </Layout.Body>
+        </Layout>
       </div>
     </>
   );

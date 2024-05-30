@@ -1,11 +1,17 @@
 import React from 'react';
-import { ListItem, User } from 'playbook-ui';
+import { ListItem, User, Flex } from 'playbook-ui';
 
 const TicketEscalationListItem = ({ avatarUrl, userName, title }) => {
   return (
     <>
       <ListItem>
-        <div className="ticket-escalation-list-item d-inline-flex justify-content-between align-items-center w-100 px-3">
+        <Flex
+          inline="true"
+          justify="between"
+          align="center"
+          padding="md"
+          className="ticket-escalation-list-item w-100"
+        >
           <User
             size="sm"
             avatarUrl={avatarUrl}
@@ -13,7 +19,7 @@ const TicketEscalationListItem = ({ avatarUrl, userName, title }) => {
             title={title}
           />
           <i className="fas fa-chevron-right gray"></i>
-        </div>
+        </Flex>
       </ListItem>
     </>
   );

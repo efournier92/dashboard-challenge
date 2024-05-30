@@ -1,0 +1,98 @@
+// Playbook App Configuration for Font Family
+$font_family_base: 'Montserrat';
+
+// Enabled Weights in Montserat
+$lighter: 200;
+$light: 300;
+$regular: 500;
+$bold: 700;
+$bolder: 700;
+$boldest: 700;
+$extrabold: 700;
+
+// Colors
+$background-blue: #f2f6fa;
+
+.w-100 {
+  width: 100;
+}
+
+.w-75 {
+  width: 75;
+}
+
+.white {
+  background: #ffffff !important;
+}
+
+.gray {
+  color: gray;
+}
+
+.black {
+  color: black;
+}
+
+.font-light {
+  font-weight: $light !important;
+}
+
+.font-smaller {
+  font-size: 0.95em !important;
+}
+
+.font-subtitle {
+  font-weight: $lighter !important;
+  font-size: 0.8em !important;
+  line-height: 0em !important;
+}
+
+.border-rounded {
+  border-radius: 6px;
+}
+
+.border-thin-around {
+  border: 1px solid #e4e8f0;
+}
+
+.border-thin-bottom {
+  border-bottom: 1px solid #e4e8f0;
+}
+
+.border-thin-top {
+  border-top: 1px solid #e4e8f0;
+}
+
+.border-thin-right {
+  border-right: 1px solid #e4e8f0;
+}
+
+.border-highlight-left {
+  border-left: 4px solid var(--bs-gray);
+}
+
+.border-color-info {
+  border-color: #00c4d7;
+}
+
+.border-color-primary {
+  border-color: #0056cf;
+}
+
+.border-color-warning {
+  border-color: #c69500;
+}
+
+.border-color-error {
+  border-color: #da0014;
+}
+
+.border-color-success {
+  border-color: #157f48;
+}
+
+.device-container {
+  @extend .border-thin-around;
+  @extend .white;
+  @extend .border-rounded;
+}
