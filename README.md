@@ -24,6 +24,8 @@
   - [Typescript](#typescript)
   - [Pixel Perfection](#pixel-perfection)
   - [Mobile Support](#mobile-support)
+  - [Styling Hackery](#styling-hackery)
+  - [Testing](#testing)
 - [Feature Stories](#feature-stories)
 
 ## Overview
@@ -145,6 +147,16 @@ yarn watch
 
 - As with pixel perfection, my time-boxing of this exercise precluded my creating a perfectly responsive layout.
   - Were I to cut back into it at some point, now with a better understanding of the Playbook system, I feel confident I could adjust it to be a fully responsive layout.
+
+### Styling Hackery
+
+- Towards the end of my work on this, in the interest of time, I was admittedly guilty of some CSS crimes I'm not proud of, particularly with regard to the `!important` property.
+  - _I want it to be clear that I'm not trying to pull a fast one on anyone reviewing this, nor do I feel these woudl adequate long-term solutions in any codebase._
+
+### Testing
+
+- Were I building this for Production, I obviously would have gone slower with it, and made sure to write automated tests for each feature I developed.
+  - Moreover, I would have taken time at the end for manual cross-browser testing, ideally having BrowserStack or a similar tool at my disposal.
 
 ## Feature Stories
 

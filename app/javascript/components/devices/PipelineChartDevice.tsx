@@ -11,6 +11,7 @@ const PipelineChartDevice = () => {
         flex="6"
         className="device-container"
         padding="none"
+        marginBottom="md"
       >
         <Flex
           align="center"

@@ -1,23 +1,28 @@
 @import '../styles/CommonStyles.scss';
 
-.ticket-metric-tile {
-  aspect-ratio: 1/1;
-}
+.ticket-metric-tile-container {
+  .ticket-metric-tile {
+    aspect-ratio: 1/1;
+    .pb_icon_kit.far.fa-fw {
+      padding-top: 25px !important;
+    }
+  }
 
-.ticket-metric-icon {
-  width: 100%;
-}
+  .ticket-metric-icon {
+    width: 100%;
+  }
 
-.ticket-metric-count {
-  font-size: 3.5em;
-  font-weight: 400;
-}
+  .ticket-metric-count {
+    font-size: 3.5em;
+    font-weight: 400;
+  }
 
-.ticket-metric-label {
-  @extend .gray;
-  font-size: 1.3em;
-  line-height: 1.3em;
-  font-weight: 300;
-  margin-top: -0.8em;
-  margin-left: 0.25em;
+  .ticket-metric-label {
+    @extend .gray;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    font-weight: 300;
+    margin-top: -0.8em;
+    margin-left: 0.25em;
+  }
 }

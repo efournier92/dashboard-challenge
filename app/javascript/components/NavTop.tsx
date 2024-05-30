@@ -1,8 +1,8 @@
 import './NavTop.scss';
 import React, { useState } from 'react';
 import {
-  Nav,
   Title,
+  Caption,
   Badge,
   User,
   Image,
@@ -26,33 +26,23 @@ const NavTop = ({ user }) => {
         align="center"
         className="w-75 m-auto"
       >
-        <Flex>
-          <div>
-            <Image
-              alt="PB&J Icon"
-              size="xs"
-              url="/sandwich-icon.svg"
-              className="mx-2"
-            />
-          </div>
-          <Flex
-            orientation="column"
-            className="mt-2"
-          >
+        <Flex align="center">
+          <Image
+            alt="PB&J Icon"
+            size="xs"
+            url="/sandwich-icon.svg"
+          />
+          <Flex orientation="column">
             <Title
               bold={false}
               size={3}
               tag="h3"
               text="PB&J"
-              className="font-light"
             />
-            <Title
-              bold={false}
-              size={4}
-              tag="div"
-              color="light"
+            <Caption
               text="INTERNATIONAL"
-              className="font-subtitle"
+              size="xs"
+              color="lighter"
             />
           </Flex>
         </Flex>
@@ -62,18 +52,18 @@ const NavTop = ({ user }) => {
             <Badge
               text="4"
               variant="primary"
-              className="mx-2"
+              marginX="xs"
             />
           </Flex>
           <Flex
             align="center"
-            padding="xl"
+            paddingX="xl"
           >
             <i className="fa-solid fa-inbox gray"></i>
             <Badge
               text="2"
               variant="primary"
-              className="mx-2"
+              marginX="xs"
             />
           </Flex>
           <div onClick={openUserDialog}>

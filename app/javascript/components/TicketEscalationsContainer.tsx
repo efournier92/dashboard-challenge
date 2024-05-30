@@ -23,10 +23,12 @@ const TicketEscalationsContainer = () => {
       <div className="ticket-escalations-container">
         <Flex
           justify="center"
-          className="ticket-escalations-title"
+          marginTop="md"
+          marginBottom="sm"
         >
           <Caption
             size="md"
+            color="lighter"
             text="THIS WEEK'S TICKET ESCALATIONS"
           />
         </Flex>

@@ -30,7 +30,7 @@ const DashboardMain = () => {
             <DashboardTitle />
             <KpiDevice />
             <TicketEscalationsContainer />
-            <Flex>
+            <Flex marginTop="sm">
               <PipelineChartDevice />
               <TicketMetricsDevice />
             </Flex>

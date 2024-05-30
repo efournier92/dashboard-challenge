@@ -47,99 +47,101 @@ const KpiDevice = () => {
       >
         {/* TODO: Abstract KpiTitleContainer component */}
         <Card.Body>
-          <div className="kpi-title-container">
-            <Flex
-              justify="between"
-              align="center"
-              className="kpi-title-content-container w-100"
-            >
-              <Title
-                bold={true}
-                tag="div"
-                size="4"
-                text="Key Performance Indicators"
-              />
-              {/* TODO: Import custom ellipsis SVG? */}
-              <CircleIconButton
-                icon="ellipsis"
-                variant="secondary"
-              />
-            </Flex>
-          </div>
+          <Flex
+            justify="between"
+            align="center"
+            className="kpi-title-content-container w-100"
+            margin="none"
+          >
+            <Title
+              size={4}
+              text="Key Performance Indicators"
+              truncate="1"
+            />
+            {/* TODO: Import custom ellipsis SVG? */}
+            <CircleIconButton
+              icon="ellipsis"
+              variant="secondary"
+            />
+          </Flex>
         </Card.Body>
         <SectionSeparator variant="card" />
         {/* <SectionSeparator /> */}
         {/* TODO: Abstract KpiNavItems container */}
-        {/* <Card className="kpi-nav-items-container"> */}
-        <Layout layout="content">
-          <Layout.Side>
+        <Layout>
+          <Layout.Side flex="2">
             <Nav highlight={false}>
               {/* TODO: Abstract KpiNavItem component */}
               {/* TODO: Dynamically Iterate on KpiNavItem components here */}
               <NavItem
                 active
                 link="#"
-                className="kpi-nav-item"
+                paddingY="md"
               >
                 <Flex justify="between">
-                  <div>Revenue</div>
+                  <b>Revenue</b>
                   <div className="kpi-metric-color-up">
-                    <i className="fa-solid fa-arrow-up mx-2"></i>
+                    <i className="fa-solid fa-arrow-up arrow-icon"></i>
                     26%
                   </div>
                 </Flex>
               </NavItem>
               <NavItem
                 link="#"
-                className="kpi-nav-item"
+                paddingY="md"
               >
                 <Flex justify="between">
-                  <div>Orders</div>
+                  <b>Orders</b>
                   <div className="kpi-metric-color-down">
-                    <i className="fa-solid fa-arrow-down mx-2"></i>
+                    <i className="fa-solid fa-arrow-down arrow-icon"></i>
                     2%
                   </div>
                 </Flex>
               </NavItem>
               <NavItem
                 link="#"
-                text="Profit"
-                className="kpi-nav-item"
-              />
-              <NavItem
-                link="#"
-                className="kpi-nav-item"
+                paddingY="md"
               >
                 <Flex justify="between">
-                  <div>Average Check</div>
+                  <b>Profit</b>
+                </Flex>
+              </NavItem>
+              <NavItem
+                link="#"
+                paddingY="md"
+              >
+                <Flex justify="between">
+                  <b>Average Check</b>
                   <div className="kpi-metric-color-up">
-                    <i className="fa-solid fa-arrow-up mx-2"></i>
+                    <i className="fa-solid fa-arrow-up arrow-icon"></i>
                     5%
                   </div>
                 </Flex>
               </NavItem>
               <NavItem
                 link="#"
-                className="kpi-nav-item"
+                paddingY="md"
               >
                 <Flex justify="between">
-                  <div>Cancelled</div>
+                  <b>Cancelled</b>
                   <div className="kpi-metric-color-down">
-                    <i className="fa-solid fa-arrow-down mx-2"></i>
+                    <i className="fa-solid fa-arrow-down arrow-icon"></i>
                     18%
                   </div>
                 </Flex>
               </NavItem>
               <NavItem
                 link="#"
-                text="Repeat Sales"
-                className="kpi-nav-item"
-              />
+                paddingY="md"
+              >
+                <Flex justify="between">
+                  <b>Repeat Sales</b>
+                </Flex>
+              </NavItem>
             </Nav>
           </Layout.Side>
-          {/* </Card> */}
           {/* TODO: Abstract KpiGraph component */}
-          <Layout.Body>
+          <Layout.Body marginTop="xl">
             <LineGraph
               chartData={chartData}
               xAxisCategories={Object.keys(revenueByDate)}

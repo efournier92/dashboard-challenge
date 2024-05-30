@@ -1,9 +1,12 @@
 import './TicketMetricTile.scss';
 import React from 'react';
-import { IconCircle, Flex, FlexItem, IconStatValue, Card } from 'playbook-ui';
+import { Flex, FlexItem, IconStatValue, Card } from 'playbook-ui';
 
 const TicketMetricTile = ({ data }) => (
-  <Card.Body padding="none">
+  <Card.Body
+    className="ticket-metric-tile-container"
+    padding="none"
+  >
     <Flex
       horizontal="center"
       spacing="evenly"

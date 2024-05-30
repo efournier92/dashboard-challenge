@@ -1,24 +1,20 @@
 import './DashboardTitle.scss';
 import React from 'react';
-import { Title } from 'playbook-ui';
+import { Title, Caption } from 'playbook-ui';
 
 const DashboardTitle = () => {
   return (
     <>
       <div className="dashboard-title-container">
-        <Title
-          bold={false}
-          size={1}
-          tag="div"
-          text="DASHBOARD"
-          className="dashboard-subtitle"
+        <Caption
+          text="Dashboard"
+          color="lighter"
         />
         <Title
           bold={false}
-          size={1}
-          tag="h1"
+          size={2}
+          tag="h2"
           text="Commerce Dashboard"
-          className="dashboard-title"
         />
       </div>
     </>

@@ -3,27 +3,6 @@
 .kpi-device-container {
   padding: 0;
 
-  .kpi-title-container {
-    height: 4em;
-  }
-
-  .kpi-title-content-container {
-    margin-top: 0.75em;
-    padding: 0 1em;
-  }
-
-  .kpi-content-container {
-    padding: 0;
-  }
-
-  .kpi-graph-container {
-    padding-top: 3em;
-  }
-
-  .kpi-title {
-    font-size: 0.9em;
-  }
-
   .kpi-metric-color-up {
     color: #2fd48e;
   }
@@ -32,8 +11,7 @@
     color: #ff4b51;
   }
 
-  .kpi-nav-items-container {
-    @extend .border-thin-right;
-    padding-right: 0;
+  .arrow-icon {
+    margin-right: 0.5em;
   }
 }

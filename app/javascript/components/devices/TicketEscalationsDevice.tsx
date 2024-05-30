@@ -1,4 +1,5 @@
 import './TicketEscalationsDevice.scss';
+import '../../styles/CommonStyles.scss';
 import React from 'react';
 import {
   Card,

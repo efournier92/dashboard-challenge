@@ -8,7 +8,7 @@ const TicketMetricsDevice = () => {
     <>
       <Card
         borderNone
-        margin="sm"
+        marginLeft="sm"
         padding="none"
         shadow="deeper"
       >
@@ -16,22 +16,6 @@ const TicketMetricsDevice = () => {
         <SectionSeparator orientation="horizontal" />
         <TicketMetricTile data={ticketMetricsData.slice(2)} />
       </Card>
-      {/* <Layout
-        layout="collection"
-        flex="6"
-      >
-        <Layout.Body>
-          {Object.keys(ticketMetricsData).map((metric, index) => (
-            <TicketMetricTile
-              key={index}
-              label={ticketMetricsData[metric].label}
-              count={ticketMetricsData[metric].count}
-              colorVariant={ticketMetricsData[metric].colorVariant}
-              icon={ticketMetricsData[metric].icon}
-            />
-          ))}
-        </Layout.Body>
-      </Layout> */}
     </>
   );
 };
