@@ -1,22 +1,21 @@
 @import '../../styles/CommonStyles.scss';
 
-.ticket-escalations-header {
-  @extend .border-highlight-left;
-  height: 6em;
-}
+.ticket-escalations-device-container {
+  @extend .device-container;
+  width: 130%;
 
-.ticket-escalations-header-badge {
-  height: 28px !important;
-  padding: 8px !important;
-}
+  .ticket-escalations-header {
+    @extend .border-highlight-left;
+    height: 6em;
+  }
 
-.ticket-escalations-header-badge span {
-  font-size: 1.4em !important;
-  padding: 8px !important;
-}
+  .ticket-escalations-header-badge {
+    height: 28px;
+    padding: 8px;
+  }
 
-.device-container {
-  @extend .border-thin-around;
-  @extend .white;
-  @extend .border-rounded;
+  .ticket-escalations-header-badge span {
+    font-size: 1.4em;
+    padding: 8px;
+  }
 }

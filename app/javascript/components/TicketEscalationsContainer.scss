@@ -1,27 +1,24 @@
 @import '../styles/CommonStyles.scss';
 
-.ticket-escalations-title {
-  @extend .font-subtitle;
-  margin: 2.5em 0 !important;
-}
+.ticket-escalations-container {
+  .ticket-escalations-title {
+    @extend .font-subtitle;
+    margin: 2.5em 0;
+  }
 
-.ticket-escalations-device-container {
-  @extend .device-container;
-  width: 130%;
-}
+  // NOTE: This is admittedly hacky, but effective for now
+  .ticket-escalation-list-item .pb_title_kit_size_4 {
+    display: none;
+  }
 
-// NOTE: This is admittedly hacky, but effective for now
-.ticket-escalation-list-item .pb_title_kit_size_4 {
-  display: none;
-}
+  .ticket-escalations-footer {
+    @extend .border-thin-top;
+  }
 
-.ticket-escalations-footer {
-  @extend .border-thin-top;
-}
-
-.show-more {
-  color: #0056cf;
-  margin: 0.7em;
-  font-weight: bold;
-  font-size: 1.2em;
+  .show-more {
+    color: #0056cf;
+    margin: 0.7em;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
 }

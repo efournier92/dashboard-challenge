@@ -3,16 +3,16 @@
 .dashboard-title-container {
   padding-top: 2.5em;
   margin-bottom: 1em;
-}
 
-.dashboard-title {
-  font-weight: $lighter !important;
-  font-size: 2.1em !important;
-}
+  .dashboard-title {
+    font-weight: $light;
+    font-size: 2.1em;
+  }
 
-.dashboard-subtitle {
-  @extend .font-subtitle;
-  @extend .gray;
-  margin-bottom: 0.4em !important;
-  font-size: 2.2em !important;
+  .dashboard-subtitle {
+    @extend .font-subtitle;
+    @extend .gray;
+    margin-bottom: 0.4em;
+    font-size: 2.2em;
+  }
 }

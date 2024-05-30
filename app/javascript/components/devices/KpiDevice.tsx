@@ -40,7 +40,7 @@ const KpiDevice = () => {
 
   return (
     <>
-      <div className="device-container">
+      <div className="kpi-device-container device-container">
         {/* TODO: Abstract KpiTitleContainer component */}
         <div className="kpi-title-container">
           <Nav

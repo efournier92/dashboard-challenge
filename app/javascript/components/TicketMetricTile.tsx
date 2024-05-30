@@ -5,7 +5,7 @@ import { IconCircle, Flex, Card } from 'playbook-ui';
 const TicketMetricTile = ({ label, count, colorVariant, icon }) => {
   return (
     <>
-      <Card className="ticket-metric-tile">
+      <Card>
         <Flex
           align="center"
           className="col-5"
