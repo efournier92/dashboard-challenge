@@ -4,7 +4,7 @@ import { Nav, NavItem } from 'playbook-ui';
 const NavMain = () => {
   return (
     <>
-      <div className="w-100 border-thin-bottom white">
+      <div className="w-100 border-thin-bottom">
         <Nav
           link="#"
           orientation="horizontal"

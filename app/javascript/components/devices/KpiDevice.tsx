@@ -9,6 +9,7 @@ import {
   Flex,
   Layout,
   Card,
+  SectionSeparator,
 } from 'playbook-ui';
 
 const KpiDevice = () => {
@@ -40,13 +41,13 @@ const KpiDevice = () => {
 
   return (
     <>
-      <div className="kpi-device-container device-container">
+      <Card
+        padding="none"
+        className="kpi-device-container"
+      >
         {/* TODO: Abstract KpiTitleContainer component */}
-        <div className="kpi-title-container">
-          <Nav
-            link="#"
-            orientation="horizontal"
-          >
+        <Card.Body>
+          <div className="kpi-title-container">
             <Flex
               justify="between"
               align="center"
@@ -54,9 +55,9 @@ const KpiDevice = () => {
             >
               <Title
                 bold={true}
-                tag="h6"
+                tag="div"
+                size="4"
                 text="Key Performance Indicators"
-                className="kpi-title"
               />
               {/* TODO: Import custom ellipsis SVG? */}
               <CircleIconButton
@@ -64,11 +65,14 @@ const KpiDevice = () => {
                 variant="secondary"
               />
             </Flex>
-          </Nav>
-        </div>
-        <Layout layout="collection_detail">
-          {/* TODO: Abstract KpiNavItems container */}
-          <Card className="kpi-nav-items-container">
+          </div>
+        </Card.Body>
+        <SectionSeparator variant="card" />
+        {/* <SectionSeparator /> */}
+        {/* TODO: Abstract KpiNavItems container */}
+        {/* <Card className="kpi-nav-items-container"> */}
+        <Layout layout="content">
+          <Layout.Side>
             <Nav highlight={false}>
               {/* TODO: Abstract KpiNavItem component */}
               {/* TODO: Dynamically Iterate on KpiNavItem components here */}
@@ -132,7 +136,8 @@ const KpiDevice = () => {
                 className="kpi-nav-item"
               />
             </Nav>
-          </Card>
+          </Layout.Side>
+          {/* </Card> */}
           {/* TODO: Abstract KpiGraph component */}
           <Layout.Body>
             <LineGraph
@@ -143,7 +148,7 @@ const KpiDevice = () => {
             />
           </Layout.Body>
         </Layout>
-      </div>
+      </Card>
     </>
   );
 };

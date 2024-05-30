@@ -10,19 +10,16 @@ $bolder: 700;
 $boldest: 700;
 $extrabold: 700;
 
-// Colors
-$background-blue: #f2f6fa;
-
 .w-100 {
-  width: 100;
+  width: 100%;
 }
 
 .w-75 {
-  width: 75;
+  width: 75%;
 }
 
-.white {
-  background: #ffffff !important;
+.m-auto {
+  margin: auto;
 }
 
 .gray {
@@ -55,14 +52,6 @@ $background-blue: #f2f6fa;
   border: 1px solid #e4e8f0;
 }
 
-.border-thin-bottom {
-  border-bottom: 1px solid #e4e8f0;
-}
-
-.border-thin-top {
-  border-top: 1px solid #e4e8f0;
-}
-
 .border-thin-right {
   border-right: 1px solid #e4e8f0;
 }
@@ -93,6 +82,5 @@ $background-blue: #f2f6fa;
 
 .device-container {
   @extend .border-thin-around;
-  @extend .white;
   @extend .border-rounded;
 }

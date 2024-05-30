@@ -6,14 +6,10 @@
     margin: 2.5em 0;
   }
 
-  // NOTE: This is admittedly hacky, but effective for now
-  .ticket-escalation-list-item .pb_title_kit_size_4 {
-    display: none;
-  }
-
-  .ticket-escalations-footer {
-    @extend .border-thin-top;
-  }
+  // // NOTE: This is admittedly hacky, but effective for now
+  // .ticket-escalation-list-item .pb_title_kit_size_4 {
+  //   display: none;
+  // }
 
   .show-more {
     color: #0056cf;

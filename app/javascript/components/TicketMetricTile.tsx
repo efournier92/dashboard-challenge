@@ -1,33 +1,26 @@
 import './TicketMetricTile.scss';
 import React from 'react';
-import { IconCircle, Flex, Card } from 'playbook-ui';
+import { IconCircle, Flex, FlexItem, IconStatValue, Card } from 'playbook-ui';
 
-const TicketMetricTile = ({ label, count, colorVariant, icon }) => {
-  return (
-    <>
-      <Card>
-        <Flex
-          align="center"
-          className="col-5"
+const TicketMetricTile = ({ data }) => (
+  <Card.Body padding="none">
+    <Flex
+      horizontal="center"
+      spacing="evenly"
+      wrap
+    >
+      {data.map((line, i) => (
+        <FlexItem
+          fixedSize="215px"
+          key={`grid-row-item-${line.icon}-${i}`}
+          paddingTop="xl"
+          className="ticket-metric-tile"
         >
-          <IconCircle
-            icon={icon}
-            variant={colorVariant}
-            size="xl"
-          />
-        </Flex>
-        <Flex
-          align="center"
-          className="col-7"
-        >
-          <Flex orientation="column">
-            <div className="ticket-metric-count">{count}</div>
-            <div className="ticket-metric-label">{label}</div>
-          </Flex>
-        </Flex>
-      </Card>
-    </>
-  );
-};
+          <IconStatValue {...line} />
+        </FlexItem>
+      ))}
+    </Flex>
+  </Card.Body>
+);
 
 export default TicketMetricTile;

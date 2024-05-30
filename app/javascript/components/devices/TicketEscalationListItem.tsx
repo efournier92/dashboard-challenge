@@ -4,12 +4,11 @@ import { ListItem, User, Flex } from 'playbook-ui';
 const TicketEscalationListItem = ({ avatarUrl, userName, title }) => {
   return (
     <>
-      <ListItem>
+      <ListItem className="w-100">
         <Flex
-          inline="true"
-          justify="between"
+          justify="around"
           align="center"
-          padding="md"
+          padding="none"
           className="ticket-escalation-list-item w-100"
         >
           <User

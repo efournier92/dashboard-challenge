@@ -1,17 +1,24 @@
 import './PercentageChartDevice.scss';
 import React from 'react';
-import { Flex } from 'playbook-ui';
+import { Flex, SectionSeparator } from 'playbook-ui';
 
 const PercentageChartDevice = ({ title, count, percentage }) => {
   return (
     <>
       <Flex
         align="center"
+        justify="between"
+        paddingX="md"
         className="percentage-chart-device"
       >
-        <span className="percentage-chart-title">{title}</span>
         <Flex
-          inline="true"
+          flex="2"
+          className="percentage-chart-title"
+        >
+          {title}
+        </Flex>
+        <Flex
+          flex="4"
           align="center"
           className="percentage-chart-bar-container"
         >
@@ -23,6 +30,7 @@ const PercentageChartDevice = ({ title, count, percentage }) => {
         </Flex>
         <span className="percentage-chart-count">{count}</span>
       </Flex>
+      <SectionSeparator />
     </>
   );
 };

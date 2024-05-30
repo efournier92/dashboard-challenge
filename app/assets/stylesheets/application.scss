@@ -15,10 +15,9 @@
  */
 
 @import '../../javascript/styles/CommonStyles.scss';
-
-body {
-  height: 100vh;
-}
-
 @import 'reset';
 @import 'playbook';
+
+body {
+  background-color: white !important;
+}

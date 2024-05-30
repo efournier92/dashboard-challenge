@@ -1,9 +1,6 @@
 @import '../../styles/CommonStyles.scss';
 
 .ticket-escalations-device-container {
-  @extend .device-container;
-  width: 130%;
-
   .ticket-escalations-header {
     @extend .border-highlight-left;
     height: 6em;

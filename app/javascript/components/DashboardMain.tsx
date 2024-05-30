@@ -8,7 +8,7 @@ import TicketMetricsDevice from './devices/TicketMetricsDevice';
 import { useQuery } from '@apollo/client';
 import { GET_USER_BY_ID } from '../services/QueryService';
 import TicketEscalationsContainer from './TicketEscalationsContainer';
-import { Layout } from 'playbook-ui';
+import { Background, Flex } from 'playbook-ui';
 
 const DashboardMain = () => {
   const getCurrentUserQuery = useQuery(GET_USER_BY_ID, {
@@ -24,23 +24,19 @@ const DashboardMain = () => {
     <>
       <NavTop user={getCurrentUserQuery.data.user} />
       <NavMain />
-      <div className="dashboard-background">
+      <Background backgroundColor="light">
         <div className="w-100">
           <div className="w-75 m-auto">
             <DashboardTitle />
             <KpiDevice />
             <TicketEscalationsContainer />
-            <Layout Layout="collection">
-              <Layout.Body>
-                <PipelineChartDevice />
-              </Layout.Body>
-              <Layout.Body>
-                <TicketMetricsDevice />
-              </Layout.Body>
-            </Layout>
+            <Flex>
+              <PipelineChartDevice />
+              <TicketMetricsDevice />
+            </Flex>
           </div>
         </div>
-      </div>
+      </Background>
     </>
   );
 };

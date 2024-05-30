@@ -1,8 +1,9 @@
 @import '../../styles/CommonStyles.scss';
 
 .kpi-device-container {
+  padding: 0;
+
   .kpi-title-container {
-    @extend .border-thin-bottom;
     height: 4em;
   }
 
@@ -11,12 +12,12 @@
     padding: 0 1em;
   }
 
-  .kpi-graph-container {
-    padding-top: 3em;
+  .kpi-content-container {
+    padding: 0;
   }
 
-  .kpi-nav-item {
-    // height: 5em;
+  .kpi-graph-container {
+    padding-top: 3em;
   }
 
   .kpi-title {

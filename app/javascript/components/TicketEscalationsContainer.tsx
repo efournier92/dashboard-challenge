@@ -1,6 +1,6 @@
 import './TicketEscalationsContainer.scss';
 import React from 'react';
-import { Flex, Layout } from 'playbook-ui';
+import { Flex, Layout, Caption } from 'playbook-ui';
 import TicketEscalationsDevice from './devices/TicketEscalationsDevice';
 import { useQuery } from '@apollo/client';
 import { GET_ALL_TICKET_ESCALATIONS } from '../services/QueryService';
@@ -18,8 +18,6 @@ const TicketEscalationsContainer = () => {
     getEscalationsQuery.data.escalations,
   );
 
-  debugger;
-
   return (
     <>
       <div className="ticket-escalations-container">
@@ -27,14 +25,14 @@ const TicketEscalationsContainer = () => {
           justify="center"
           className="ticket-escalations-title"
         >
-          THIS WEEK'S TICKET ESCALATIONS
+          <Caption
+            size="md"
+            text="THIS WEEK'S TICKET ESCALATIONS"
+          />
         </Flex>
         <Layout layout="kanban">
           {Object.keys(ticketEscalations).map((escalationKey, index) => (
-            <Layout.Body
-              className="col-lg-2"
-              key={index}
-            >
+            <Layout.Body key={index}>
               <TicketEscalationsDevice
                 ticketEscalations={ticketEscalations[escalationKey]}
               />
