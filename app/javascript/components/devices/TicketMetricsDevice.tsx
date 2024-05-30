@@ -6,8 +6,11 @@ const TicketMetricsDevice = () => {
   return (
     <>
       <div className="row">
-        {Object.keys(ticketMetricsData).map((metric) => (
-          <div className="col-6">
+        {Object.keys(ticketMetricsData).map((metric, index) => (
+          <div
+            className="col-6"
+            key={index}
+          >
             <TicketMetricTile
               label={ticketMetricsData[metric].label}
               count={ticketMetricsData[metric].count}

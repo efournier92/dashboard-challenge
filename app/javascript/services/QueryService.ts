@@ -16,14 +16,15 @@ export const GET_ALL_TICKET_ESCALATIONS = gql`
   query GetAllTicketEscalations {
     escalations {
       id
-      user {
-        name
-        gender
-      }
       category
       title
       createdAt
       updatedAt
+      user {
+        id
+        name
+        gender
+      }
     }
   }
 `;

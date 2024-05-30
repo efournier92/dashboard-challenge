@@ -1,6 +1,7 @@
 import React from 'react';
-import { List, ListItem, Badge, User } from 'playbook-ui';
+import { List, ListItem, Badge } from 'playbook-ui';
 import TicketEscalationListItem from './TicketEscalationListItem';
+import { getAvatarUrl } from '../../services/AvatarService';
 
 const TicketEscalationsDevice = ({ ticketEscalations }) => {
   const totalEscalations = ticketEscalations.data.length;
@@ -20,7 +21,7 @@ const TicketEscalationsDevice = ({ ticketEscalations }) => {
             <div className="font-subtitle">{title.toUpperCase()}</div>
             <div className="">
               <Badge
-                text={escalations.length}
+                text={totalEscalations}
                 variant={colorVariant}
                 rounded="true"
                 className="ticket-escalations-header-badge"
@@ -30,9 +31,12 @@ const TicketEscalationsDevice = ({ ticketEscalations }) => {
           {escalations.map((escalation) => (
             <TicketEscalationListItem
               key={escalation.id}
-              avatarUrl={escalation.avatarUrl}
-              userName={escalation.userName}
+              userName={escalation.user.name}
               title={escalation.title}
+              avatarUrl={getAvatarUrl(
+                escalation.user.id,
+                escalation.user.gender,
+              )}
             />
           ))}
         </List>

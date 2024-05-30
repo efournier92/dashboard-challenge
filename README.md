@@ -75,6 +75,13 @@
   - The line does not have a data point for mid-month dates.
     - _This seems divergent from the default behavior of the component._
 
+### Typescript
+
+- Not using it effectively.
+  - Hit compiler issues.
+  - Deferred resolving.
+  - TODO
+
 ## Feature Stories
 
 ### [X] TK-000 > Back End > Initialize the Application
@@ -352,7 +359,7 @@
     - _Escalated_.
       - 896 total.
 
-### [ ] TK-013 > Back End > Integrate Apollo Client with the React Front End
+### [X] TK-013 > Front End > Integrate Apollo Client with the React Front End
 
 #### Story
 
@@ -363,3 +370,42 @@
 - The following packages are available and integrated with React.
   - `@apollo/client`
   - `graphql`
+
+### [ ] TK-014 > Front End > Add a Click Action to Display a User-Details Popover
+
+#### Story
+
+- As a user, I want to see a popover when I click the down chevron next to my name, so I can review my user details.
+
+#### Acceptance Criteria
+
+- A popover is displayed upon clicking the down chevron to the right of the the user's name in the top nav bar.
+- The popover includes the following user details.
+  - Name.
+  - Avatar.
+  - Title.
+- This can built using the [Vertical Default User](https://playbook.powerapp.cloud/kits/user/react#default) component from the _Playbook Design System_.
+
+### [ ] TK-015 > Front End > Import Custom Icons
+
+#### Story
+
+- As a developer, I want to leverage custom-icon functionality from the _Playbook Design System_, so I can match the mockup without needing to pay for the Pro version.
+
+#### Acceptance Criteria
+
+- Custom icons has been imported using the following guide.
+  - [Tips for Custom Icons](https://playbook.powerapp.cloud/kits/icon/react#Tips-for-Custom-Icons)
+- SVG images has been located and hosted for each relevant icon.
+- All icons indicated in the mockup screenshot render correctly on the dashboard.
+
+### [ ] TK-016 > Front End > Deprecate Bootstrap in Favor of Playbook Layouts
+
+#### Story
+
+- As a developer, I want to use exclusively layouts from the _Playbook Design System_, so I can deprecate Bootstrap from the client-side application.
+
+#### Acceptance Criteria
+
+- All usages of Bootstrap grid and flex libraries are replaced with equivalent functionality from the _Playbook Design System_.
+- Bootstrap is no longer included on the client side.
