@@ -2,16 +2,23 @@
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Overview](#overview)
 - [Design Philosophy](#design-philosophy)
   - [Development Approach](#development-approach)
-  - [Technologies Utlized](#technologies-utlized)
+  - [Technologies Utilized](#technologies-utilized)
   - [Sources](#sources)
 - [Challenge Requirements](#challenge-requirements)
 - [Project Details](#project-details)
   - [Dependencies](#dependencies)
-  - [Running the Application](#running-the-application)
-- [Areas for Improvement](#areas-for-improvement)
+  - [Setup](#setup)
+    - [Prepare the Environment](#prepare-the-environment)
+    - [Serve the Application](#serve-the-application)
+- [Links](#links)
+  - [Local](#local)
+    - [Root](#root)
+    - [Graphiql > Sandbox IDE](#graphiql--sandbox-ide)
+- [Areas for Improvment](#areas-for-improvment)
   - [Line Chart](#line-chart)
   - [Icons](#icons)
   - [Typescript](#typescript)
@@ -80,11 +87,33 @@
 1. Install gem dependencies `bundle`
 1. Install yarn dependencies `yarn`
 
-### Running the Application
+### Setup
 
-1. `yarn watch` will take care of any React component changes
-1. `bin/rails s` will start the Rails application
-1. Navigate to [localhost:3000](http://localhost:3000)
+#### Prepare the Environment
+
+```bash
+bundle
+rails db:reset
+```
+
+#### Serve the Application
+
+```bash
+bin/rails s
+yarn watch
+```
+
+## Links
+
+### Local
+
+#### Root
+
+- http://localhost:3000/
+
+#### Graphiql > Sandbox IDE
+
+- http://localhost:3000/graphiql
 
 ## Areas for Improvment
 
