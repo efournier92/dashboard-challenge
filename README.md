@@ -304,11 +304,10 @@
 
 - The following data is seeded, served via API, and consumed by the React front-end application.
   - Users.
-    - Total: 15.
+    - Total: 10.
     - Includes:
       - Name.
-      - Initials.
-      - Avatar.
+      - Gender.
   - Key Performance Indicators:
     - _Revenue_ metrics.
     - Percentage change for _Orders_.

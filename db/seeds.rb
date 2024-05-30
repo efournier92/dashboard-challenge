@@ -6,3 +6,48 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+User.create(
+  [
+    {
+      name: 'Minnie Robertson',
+      gender: 'female',
+    },
+    {
+      name: 'Boyd Strickland',
+      gender: 'male',
+    },
+    {
+      name: 'Mona Munoz',
+      gender: 'female',
+    },
+    {
+      name: 'Arthur May',
+      gender: 'male',
+    },
+    {
+      name: 'Rita Richards',
+      gender: 'female',
+    },
+    {
+      name: 'Danny Stokes',
+      gender: 'male',
+    },
+    {
+      name: 'Marcos Collier',
+      gender: 'female',
+    },
+    {
+      name: 'Brandon Graham',
+      gender: 'male',
+    },
+    {
+      name: 'Marion Pena',
+      gender: 'female',
+    },
+    {
+      name: 'Lauren Buchanan',
+      gender: 'female',
+    },
+  ]
+)
